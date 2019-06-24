@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <tr>
+        <td><input id="nhapso1" type="number"></td>
+        <td><input id="nhapso2" type="number"></td>
+    </tr>
+    <br>
+    <button type="button" onclick="cong()">cong(+)</button>
+    <button type="button" onclick="tru()">tru(-)</button>
+    <button type="button" onclick="nhan()">nhan(x)</button>
+    <button type="button" onclick="chia()">chia(%)</button>
+
+
+</form>
+ket qua : <span id="ketqua"></span>
+<script>
+   function cong() {
+      let nhapso1 = parseInt(document.getElementById("nhapso1").value);
+      let nhapso2 = parseInt(document.getElementById("nhapso2").value);
+      let ketqua;
+      ketqua = (nhapso1+nhapso2);
+      document.getElementById("ketqua").innerHTML=ketqua;
+   }
+   function tru() {
+       let nhapso1 = parseInt(document.getElementById("nhapso1").value);
+       let nhapso2 = parseInt(document.getElementById("nhapso2").value);
+       let ketqua;
+       ketqua=(nhapso1-nhapso2);
+       document.getElementById("ketqua").innerHTML=ketqua;
+   }
+   function nhan() {
+       let nhapso1 = parseInt(document.getElementById("nhapso1").value);
+       let nhapso2 = parseInt(document.getElementById("nhapso2").value);
+       let ketqua;
+       ketqua=(nhapso1*nhapso2);
+       document.getElementById("ketqua").innerHTML=ketqua;
+   }
+   function chia() {
+       let nhapso1 = parseInt(document.getElementById("nhapso1").value);
+       let nhapso2 = parseInt(document.getElementById("nhapso2").value);
+       let ketqua;
+       ketqua=(nhapso1/nhapso2);
+       document.getElementById("ketqua").innerHTML=ketqua;
+   }
+
+
+</script>
+</body>
+</html>
